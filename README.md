@@ -20,6 +20,13 @@ AI Engineer at **BukuWarung** (Jakarta) · previously ML Engineer II at **SaaS L
 - **Conversational intelligence (JustCall IQ):** led call summaries, AI call scoring, and AI tags and priority, used by 30+ businesses.
 - **LLMOps:** Langfuse tracing across every production agent, plus an LLM evaluation and prompt-engineering pipeline on AWS and GCP.
 
+### Open-source contributions
+
+- **[Pipecat — Pillow 13 compatibility](https://github.com/pipecat-ai/pipecat/pull/6286)** · Merged  
+  Updated the dependency constraint and lockfile to support Pillow 13.
+  Validated 153 focused tests against Pillow 12.3 and 13; upstream CI passed,
+  including Python 3.11–3.14 compatibility.
+
 ### Featured projects
 
 | Project | What it does | Stack |
