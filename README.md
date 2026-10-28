@@ -11,6 +11,35 @@ AI Engineer at **BukuWarung** (Jakarta) · previously ML Engineer II at **SaaS L
 
 ---
 
+### Open-source contributions
+
+**Contributor to PipesHub and Pipecat**, with merged fixes for streaming, citation accuracy and dependency compatibility.
+
+**4 merged PRs · 10 open PRs** · October 28, 2026
+
+#### Merged fixes
+
+| Project | Problem fixed | PR |
+|---|---|---|
+| **PipesHub** | Valid streaming events were silently dropped. Fixed SSE field parsing, unnamed events and state reset between frames. | [#4750 — Merged](https://github.com/pipeshub-ai/pipeshub-ai/pull/4750) |
+| **PipesHub** | Citation links could split contractions in mixed CJK/Latin text. Preserved word boundaries when generating text fragments. | [#4749 — Merged](https://github.com/pipeshub-ai/pipeshub-ai/pull/4749) |
+| **PipesHub** | CSS custom properties and quoted strings could hide visible text from citations. Replaced raw substring matching with CSS parsing. | [#4751 — Merged](https://github.com/pipeshub-ai/pipeshub-ai/pull/4751) |
+| **Pipecat** | The dependency constraint blocked installation alongside Pillow 13. Updated the constraint and lockfile to support it. | [#6286 — Merged](https://github.com/pipecat-ai/pipecat/pull/6286) |
+
+Each fix includes regression tests. The streaming update passed **3,833 frontend tests** and TypeScript checks locally; the Pillow update passed 153 focused tests on both versions and upstream CI.
+
+<details>
+<summary><strong>10 open PRs across Langfuse, LiveKit, Pipecat, LlamaIndex, aiocache and Ollama</strong></summary>
+
+- **Langfuse:** [release detection when CI variables are empty](https://github.com/langfuse/langfuse-python/pull/2042). Updated branch passes **978 unit tests** locally; awaiting upstream checks and merge.
+- **LiveKit Agents:** [keep image-fit dimensions positive](https://github.com/livekit/agents/pull/8058) and [make instruction hashes consistent with string equality](https://github.com/livekit/agents/pull/8066).
+- **Pipecat:** [close OpenAI-compatible clients during cleanup](https://github.com/pipecat-ai/pipecat/pull/6284).
+- **LlamaIndex:** [parse extended HWP record lengths](https://github.com/run-llama/llama_index/pull/23650) and [normalize Obsidian vault paths for metadata](https://github.com/run-llama/llama_index/pull/23654).
+- **aiocache:** [safe Valkey cache representation before connecting](https://github.com/aio-libs/aiocache/pull/1089), [cancel stale TTL timers on clear](https://github.com/aio-libs/aiocache/pull/1090), and [handle empty batch reads in cache metrics](https://github.com/aio-libs/aiocache/pull/1091).
+- **Ollama:** [preserve model temperature defaults in the completions API](https://github.com/ollama/ollama/pull/19237).
+
+</details>
+
 ### What I've shipped
 
 - **Voice AI agent (SaaS Labs):** real-time calling agent (STT → LLM → TTS) that lifted revenue 30% and has generated **$1.5M+** since launch. Runs on GCP with Kubernetes at **P99 < 1 s**.
@@ -19,30 +48,6 @@ AI Engineer at **BukuWarung** (Jakarta) · previously ML Engineer II at **SaaS L
 - **Agentic automation:** 20+ automations across People, Finance, Marketing and Ops, saving **~1,500 hrs/month**. Includes AI agents for crisis escalation, invoice processing (OCR + LLM) and travel-policy approvals.
 - **Conversational intelligence (JustCall IQ):** led call summaries, AI call scoring, and AI tags and priority, used by 30+ businesses.
 - **LLMOps:** Langfuse tracing across every production agent, plus an LLM evaluation and prompt-engineering pipeline on AWS and GCP.
-
-### Open-source contributions
-
-I contribute fixes to the voice, agent and observability tools I use in production, with regression tests that reproduce the bug before the fix.
-
-**4 merged PRs · 10 open PRs** as of October 28, 2026.
-
-#### Merged
-
-| Project | Contribution |
-|---|---|
-| **PipesHub** | [SSE parsing and event handling](https://github.com/pipeshub-ai/pipeshub-ai/pull/4750): accept valid field formats, deliver unnamed events and reset state between frames. Validated with **3,833 frontend tests** and TypeScript checks. |
-| **PipesHub** | [Mixed-script citations](https://github.com/pipeshub-ai/pipeshub-ai/pull/4749): preserve contractions when generating text-fragment links across CJK and Latin text. |
-| **PipesHub** | [HTML citation extraction](https://github.com/pipeshub-ai/pipeshub-ai/pull/4751): parse inline CSS so custom properties and quoted strings don't incorrectly hide visible text. |
-| **Pipecat** | [Pillow 13 compatibility](https://github.com/pipecat-ai/pipecat/pull/6286): update the dependency constraint and lockfile. Validated 153 focused tests against Pillow 12.3 and 13; upstream CI passed, including Python 3.11–3.14 compatibility. |
-
-#### Open PRs
-
-- **Langfuse:** [release detection when CI variables are empty](https://github.com/langfuse/langfuse-python/pull/2042). Updated branch passes **978 unit tests** locally; awaiting upstream checks and merge.
-- **LiveKit Agents:** [keep image-fit dimensions positive](https://github.com/livekit/agents/pull/8058) and [make instruction hashes consistent with string equality](https://github.com/livekit/agents/pull/8066).
-- **Pipecat:** [close OpenAI-compatible clients during cleanup](https://github.com/pipecat-ai/pipecat/pull/6284).
-- **LlamaIndex:** [parse extended HWP record lengths](https://github.com/run-llama/llama_index/pull/23650) and [normalize Obsidian vault paths for metadata](https://github.com/run-llama/llama_index/pull/23654).
-- **aiocache:** [safe Valkey cache representation before connecting](https://github.com/aio-libs/aiocache/pull/1089), [cancel stale TTL timers on clear](https://github.com/aio-libs/aiocache/pull/1090), and [handle empty batch reads in cache metrics](https://github.com/aio-libs/aiocache/pull/1091).
-- **Ollama:** [preserve model temperature defaults in the completions API](https://github.com/ollama/ollama/pull/19237).
 
 ### Featured projects
 
